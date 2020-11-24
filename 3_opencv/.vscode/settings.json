@@ -47,6 +47,8 @@
         "thread": "cpp",
         "cinttypes": "cpp",
         "utility": "cpp",
-        "typeinfo": "cpp"
-    }
+        "typeinfo": "cpp",
+        "random": "cpp"
+    },
+    "git.ignoreLimitWarning": true
 }

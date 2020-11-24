@@ -30,21 +30,23 @@ int main(){
     MyEllipse(atom_image, 90);
     MyEllipse(atom_image, 0);
     MyEllipse(atom_image, 45);
-    MyEllipse(atom_image, -45);
+    MyEllipse(atom_image, -45);//四条椭圆
     
-    MyFilledCircle(atom_image, Point(w/2, w/2));
-    MyPolygon(rook_image);
+    MyFilledCircle(atom_image, Point(w/2, w/2));//圆形
+
+    MyPolygon(rook_image);//多边形
+
     rectangle(rook_image,
             Point(0, 7* w /8),
             Point(w, w),
             Scalar(0, 255,255),
             FILLED,
-            LINE_8);
+            LINE_8);//矩形
 
   MyLine( rook_image, Point( 0, 15*w/16 ), Point( w, 15*w/16 ) );
   MyLine( rook_image, Point( w/4, 7*w/8 ), Point( w/4, w ) );
   MyLine( rook_image, Point( w/2, 7*w/8 ), Point( w/2, w ) );
-  MyLine( rook_image, Point( 3*w/4, 7*w/8 ), Point( 3*w/4, w ) );
+  MyLine( rook_image, Point( 3*w/4, 7*w/8 ), Point( 3*w/4, w ) );//画线
 
   imshow( atom_window, atom_image );
   moveWindow( atom_window, 0, 200 );
