@@ -49,6 +49,7 @@ print("image.shape : ", image.shape)
 
 #2. resize to target shape
 (scaled_w, scaled_h) = (224, 224)
+
 if resize_strategy == "tf":
     import tensorflow as tf
     image = np.expand_dims(image, 0)
@@ -58,10 +59,15 @@ if resize_strategy == "tf":
     '''
     print("np add dims : ", image.shape)
 
-    tf_resized_image = tf.compat
+    tf_resized_image = tf.compat.v1.image.resize_bilinear(image,
+                                                          (scaled_w, scaled_h))
+    with tf.Session():
+        resized_image = tf_resized_image.eval()
 
 
-
+else:
+    cv_resized_image = cv2.resize(image, (scaled_w, scaled_h), interpolation=cv2.INTER_AREA)
+    resized_image = np.expand_dims(cv_resized_image, 0)
 
 
 

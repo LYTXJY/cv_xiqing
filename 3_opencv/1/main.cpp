@@ -12,6 +12,17 @@
 // }
 
 
+
+
+
+
+
+/*
+
+
+g++ -std=c++11 3.cpp -o main_dle `pkg-config --cflags --libs opencv4`
+*/
+
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
 
